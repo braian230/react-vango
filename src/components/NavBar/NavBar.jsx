@@ -1,7 +1,8 @@
 import Button from 'react-bootstrap/Button';
-import ImagenLogo from "../../assets/logo.jpg";
-import CartWidget from '../CartWidget/CardWidget';
+import "./Navbar.css"
+import ImagenLogo from "../../assets/logo.jpg"
 
+import { CartWidget } from '../CartWiget/CartWidget';
 export const NavBar = ()=>{
 
     return(
