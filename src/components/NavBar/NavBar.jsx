@@ -1,21 +1,24 @@
+import { CartWidget } from "../CartWidget/CartWidget"
+import './NavBar.css';
+import pendiente from '../../../assets/pendiente.png';
+import {Link, NavLink} from "react-router-dom";
 
-import "./Navbar.css";
-import ImagenLogo from "../../assets/logo.jpg"
-import React from 'react';
-
-import { CartWidget } from '../CartWiget/CartWidget';
-export const NavBar = ()=>{
-
+export const NavBar = () =>{
     return(
-        <nav className='navegation'>
-            <img className='logo' src={ImagenLogo} alt='logo'/>
-            <ul className='list'>
-                <li><a href='/'>NEW!</a></li>
-                <li><a href='/'>Accesorios</a></li>
-                <li><a href='/'>Complementos</a></li>
-                <li><a href='/'>Textil</a></li>
-            </ul>
-            <CartWidget/>
+        <nav className='nav-container'>
+            <div>
+                <img className="nav-brand" src={pendiente} alt="logo"/>
+            </div>
+            <div className='navegacion'>
+                <Link to="/">Inicio</Link>
+                <Link to="/contacto">Contacto</Link>
+                <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} to="/category/camisas">Aros y pendientes</NavLink>
+                <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} to="/category/zapatos">Complementos</NavLink>
+                <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} to="/category/pantalones">Textil</NavLink>
+            </div>
+            <div>
+                <CartWidget/>
+            </div>
         </nav>
     )
 }
