@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import React from "react";
 export const ContactoPage = ()=>{
     const [isMobile,setIsMobile] = useState(false);
 

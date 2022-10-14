@@ -5,7 +5,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { NavBar }  from './components/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {ItemDetailContainer} from "./components/ItemDetailContainer/ItemDetailContainer";
-import {ContactoPage}  from "./components/ContactoPage/ContactoPage.jsx";
+import {ContactoPage}  from "./components/ContactoPage";
 import {EventosDefault} from "./components/EventosDefault/EventosDefault";
 function App() {
   return (

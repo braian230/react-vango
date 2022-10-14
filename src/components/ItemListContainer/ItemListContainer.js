@@ -1,11 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import React from "react";
 import './ItemListContainer.css';
 import { arregloProductos } from "../../baseDatos/baseDatos";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
 export const ItemListContainer = ()=>{
+    const {categoryId} = useParams();
     console.log(useParams());
     const [productos, setProductos] = useState([]);
 
@@ -14,7 +15,7 @@ export const ItemListContainer = ()=>{
             resolve(arregloProductos);
         }, 2000);
     })
-
+   
     useEffect(()=>{
         promesa.then((response)=>{
             if(categoryId){
