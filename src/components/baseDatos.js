@@ -1,9 +1,9 @@
-import relojVerde from '../../assets/productos/reloj-verde.png';
-import relojCeleste from '../../assets/productos/reloj-celeste.png';
-import gorras from '../../assets/productos/gorras.png';
-import gafasRosas from '../../assets/productos/gafas-rosas.png';
-import gafasNegras from '../../assets/productos/gafas-negras.png';
-import carteraVerde from '../../assets/productos/cartera-verde.png';
+import relojVerde from '../assets/productos/reloj-verde.png';
+import relojCeleste from '../assets/productos/reloj-celeste.png';
+import gorras from '../assets/productos/gorras.png';
+import gafasRosas from '../assets/productos/gafas-rosas.png';
+import gafasNegras from '../assets/productos/gafas-negras.png';
+import carteraVerde from '../assets/productos/cartera-verde.png';
 
 
 export const arregloProductos = 

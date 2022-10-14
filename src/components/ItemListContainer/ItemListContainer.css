@@ -5,3 +5,8 @@
     padding: 0;
     width: 100%;
 }
+.tarjeta-producto{
+    min-width: 100px;
+    min-height: 80px;
+    
+}

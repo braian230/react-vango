@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {useState} from 'react';
 import './ItemCount.css';
+import React from 'react';
+
 
 export const ItemCount = ({stock, initial, onAdd, showText})=>{
     const [count, setCount] = useState(initial);
@@ -21,7 +23,7 @@ export const ItemCount = ({stock, initial, onAdd, showText})=>{
         <div className='estilosContador'>
             <p>Stock disponible: {stock}</p>
             <div className='contenedorControles'>
-                <button disabled={stock===0} onClick={decrementar} className='botonControl'>-</button>
+                <button disabled={stock ===0} onClick={decrementar} className='botonControl'>-</button>
                 <p>{count}</p>
                 <button disabled={stock===0} onClick={incrementar} className='botonControl'>+</button>
             </div>

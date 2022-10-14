@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import './ItemListContainer.css';
-import { arregloProductos } from "../../baseDatos/baseDatos";
+import { arregloProductos } from "../baseDatos";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-
+import React from 'react';
 export const ItemListContainer = ()=>{
     const {categoryId} = useParams();
     console.log(useParams());
@@ -32,7 +32,7 @@ export const ItemListContainer = ()=>{
     console.log("productos", productos);
     return(
         <div className="item-list-container">
-            <p>item list container</p>
+            <h1>Vango accesorios</h1>
             <ItemList items={productos} otraPropiedad={123}/>
         </div>
     )

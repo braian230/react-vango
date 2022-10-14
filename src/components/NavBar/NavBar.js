@@ -1,7 +1,8 @@
 import { CartWidget } from "../CartWidget/CartWidget"
-import './NavBar.css';
-import pendiente from '../../../assets/pendiente.png';
+import './Navbar.css';
+import pendiente from '../../assets/pendiente.png';
 import {Link, NavLink} from "react-router-dom";
+import React from 'react';
 
 export const NavBar = () =>{
     return(
@@ -12,9 +13,9 @@ export const NavBar = () =>{
             <div className='navegacion'>
                 <Link to="/">Inicio</Link>
                 <Link to="/contacto">Contacto</Link>
-                <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} to="/category/camisas">Aros y pendientes</NavLink>
-                <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} to="/category/zapatos">Complementos</NavLink>
-                <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} to="/category/pantalones">Textil</NavLink>
+                <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} to="/category/bijou">Aros y pendientes</NavLink>
+                <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} to="/category/complementos">Complementos</NavLink>
+                <NavLink className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} to="/category/textil">Textil</NavLink>
             </div>
             <div>
                 <CartWidget/>

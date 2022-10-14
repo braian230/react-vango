@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import './ItemDetailContainer.css';
-import { arregloProductos } from "../../baseDatos/baseDatos";
+import { arregloProductos } from ".././baseDatos";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import {useParams} from "react-router-dom";
+import React from 'react';
 
 // /item/id
 export const ItemDetailContainer = ()=>{
@@ -28,7 +29,7 @@ export const ItemDetailContainer = ()=>{
 
     return(
         <div className="item-detail-container">
-            <p style={{width:"100%", color: "white"}}>item detail container</p>
+            <p style={{width:"100%", color: "white"}}>Selecionar producto</p>
             <ItemDetail item={itemProduct}/>
         </div>
     )

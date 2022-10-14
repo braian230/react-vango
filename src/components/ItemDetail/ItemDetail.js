@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import React from 'react';
-import { CartWidget } from '../CartWidget/CartWidget';
 import { ItemCount } from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
@@ -18,7 +17,7 @@ export const ItemDetail = ({item})=>{
 
     return(
         <div className='detail-container'>
-            <p style={{width: "100%"}}>item detail</p>
+            <p style={{width: "100%"}}>item list container</p>
             <div className='img-container'>
                 <img src={item.pictureUrl} alt={item.title}/>
             </div>
