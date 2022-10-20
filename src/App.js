@@ -20,6 +20,7 @@ function App() {
             <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
             <Route path="/item/:id" element={<ItemDetailContainer/>}/>
             <Route path="/contacto" element={<EventosDefault/>}/>
+            
         </Routes>
         <footer>Todos los derechos reservados Vango Accesorios 2022.</footer>
         </div>
