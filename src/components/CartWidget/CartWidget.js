@@ -1,10 +1,13 @@
 import Carrito from '../../assets/carrito.png';
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 export const CartWidget = ()=>{
-    return(
+    const {getTotalProducts} = useContext(CartContext);
+    
+        return(
         <div>
-            <img src={Carrito} alt="pendiente" style={{width:20}}/>
-            <span style={{backgroundColor: 'white', borderRadius:"50%", width:"10px", heigth:"10px", fontSize:"10px", color:"black"}}>2</span>
+            <img src={Carrito} alt="carrito" style={{width:20}}/>
+            <span style={{backgroundColor: 'white', borderRadius:"50%", width:"10px", heigth:"10px", fontSize:"10px", color:"black"}}>{getTotalProducts()}</span>
         </div>
     )
 }
