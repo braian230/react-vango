@@ -4,25 +4,26 @@ import { arregloProductos } from ".././baseDatos";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import {useParams} from "react-router-dom";
 import React from 'react';
-
+import {db} from "../../utils/firebase";
+import {doc,getDoc } from "firebase/firestore";
 // /item/id
 export const ItemDetailContainer = ()=>{
     const {id} = useParams(); //{id:"8"}
     const [itemProduct, setItemProduct] = useState({});
 
-    const promesa = new Promise((resolve, reject)=>{
-        setTimeout(() => {
-            resolve(arregloProductos);
-        }, 2000);
-    })
+  
 
     useEffect(()=>{
         const getProducto = async()=>{
-            const productos = await promesa;
-            console.log('productos', productos);
-            const producto = productos.find(elemento=>elemento.id === parseInt(id));
-            console.log("producto", producto)
-            setItemProduct(producto);
+          
+            const queryRef = doc(db, "productos",id );
+            const response =  await getDoc(queryRef);
+            console.log(response);
+            const newDoc ={ 
+                ...response.data(),
+                id:response.id
+            }
+            setItemProduct(newDoc)
         }
         getProducto();
     },[id])

@@ -10,8 +10,7 @@ import {CartProvider} from "./context/CartContext"
 import {EventosDefault} from "./components/EventosDefault/EventosDefault";
 import { PaginaContexto } from "./components/PaginaContexto/PaginaContexto";
 function App() {
-  
-  
+ 
   
   return (
 <CartProvider>  
@@ -32,7 +31,8 @@ function App() {
       </div>
   </BrowserRouter>
 </CartProvider>    
-  );
+    );
+
 }
 
 export default App;

@@ -6,7 +6,7 @@ export const CartWidget = ()=>{
     
         return(
         <div>
-            <img src={Carrito} alt="carrito" style={{width:20}}/>
+            <img src={Carrito} alt="carrito" style={{heigth:"2px",width:"2px"}}/>
             <span style={{backgroundColor: 'white', borderRadius:"50%", width:"10px", heigth:"10px", fontSize:"10px", color:"black"}}>{getTotalProducts()}</span>
         </div>
     )
