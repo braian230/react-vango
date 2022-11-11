@@ -14,7 +14,7 @@ E-commerce creado con REACT JS
 Firebase
 Material UI	
 
-###Como ver el sitio
+#### Visualizar el sitio
 *Clonar el sitio  https://github.com/braian230/react-vango.git
 *Instalar packages de ser necesario
 *Iniciar proyecto ejecutando NPM START
