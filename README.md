@@ -6,9 +6,9 @@ E-commerce creado con REACT JS
 
 
 ### Lenguajes utilizados
-↕HTML
-↕CSS
-↕JAVASCRIPT
+"↕HTML"
+"↕CSS"
+"↕JAVASCRIPT"
 
 ### Bases de datos/Librerias
 Firebase
