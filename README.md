@@ -1,10 +1,11 @@
-# Vango Accesorios
+#` Vango Accesorios`
 E-commerce   
 
-##Descripción
-E-commerce creado con REACT JS 
+##`Descripción`
+E-commerce creado con REACT JS
 
-###Lenguajes utilizados
+
+###`Lenguajes utilizados`
 ↕HTML
 ↕CSS
 ↕JAVASCRIPT
