@@ -10,25 +10,18 @@ E-commerce creado con REACT JS
 ↕CSS
 ↕JAVASCRIPT
 
+### Bases de datos/Librerias
+Firebase
+Material UI	
 
-###Como ver el codigo
+###Como ver el sitio
 *Clonar el sitio  https://github.com/braian230/react-vango.git
 *Instalar packages de ser necesario
 *Iniciar proyecto ejecutando NPM START
 
 ### 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
