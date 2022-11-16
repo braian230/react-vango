@@ -2,12 +2,12 @@
  // eslint-disable-next-line
 import { useEffect, useState} from "react";
 import './ItemListContainer.css';
-import { arregloProductos } from "../baseDatos";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import {collection,getDocs,getFirestore,limit, query, where} from "firebase/firestore";
+import { collection,getDocs,query, where} from "firebase/firestore";
 import React from 'react';
 import {db} from '../../utils/firebase';
+
 export const ItemListContainer = ()=>{
 
     const {categoryId} = useParams();
@@ -35,6 +35,7 @@ export const ItemListContainer = ()=>{
     return(
         <div className="item-list-container">
             <h1>Vango accesorios</h1>
+    
             {loading ? <p>Espera mientras carga...</p>
                 :
             <ItemList items={productos} otraPropiedad={123}/>

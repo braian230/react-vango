@@ -45,7 +45,7 @@ export const CartProvider = ({children})=>{
         const newProducts = productosCarrito.filter((elemento)=>elemento.id !== id);
         setProductosCarrito(newProducts);
     }
-
+   
     return(
         <CartContext.Provider value={{productosCarrito: productosCarrito, addProduct, getTotalPrice, getTotalProducts,removeItem}}>
             {children}

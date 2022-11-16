@@ -7,13 +7,6 @@ export const ContactoPage = ()=>{
         console.log("hiciste clic", event)
     }
 
-    //esto se ejecuta despues del primer renderizado.
-    // useEffect(()=>{
-    //     window.addEventListener("click",hacerClick);
-    //     return ()=>{
-    //         window.removeEventListener("click", hacerClick);
-    //     }
-    // },[])
 
     useEffect(()=>{
         const verificarResolucion = ()=>{
@@ -31,8 +24,8 @@ export const ContactoPage = ()=>{
     },[])
 
     return(
-        <div style={{background:"pink", height:"200px"}}>
-            <p onClick={hacerClick}>pagina de contacto</p>
+        <div style={{background:"pink", height:"200px", fontSize:"40px"}}>
+            <h2 onClick={hacerClick}>Chatea con nosotros</h2>
             {
                 isMobile === true ?
                 <p>soy un elemento de mobile</p>
