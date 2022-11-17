@@ -1,7 +1,7 @@
 # Vango Accesorios
 E-commerce   
 
-# Autor y Descripcion
+## Autor y Descripcion
 Ariel Moreno
 E-commerce creado con REACT JS
 
