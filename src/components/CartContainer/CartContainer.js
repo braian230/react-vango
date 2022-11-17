@@ -10,7 +10,7 @@ import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCh
 
 export const CartContainer = ()=>{
     const value = useContext(CartContext);
-    const {productosCarrito, getTotalPrice, getTotalProducts, removeItem, vaciarCarrito} = value;
+    const {productosCarrito, getTotalPrice, getTotalProducts, removeItem} = value;
     const [compraId, setCompraId] = useState("");
 
     const sendOrder = (evt)=>{
@@ -28,7 +28,6 @@ export const CartContainer = ()=>{
         }
         const querydb = getFirestore();
         const queryRef = collection(querydb,"orders");
-        //agregar la informacion
         addDoc(queryRef,compra).then((resultado)=>{
             
             setCompraId(resultado.id);
@@ -39,11 +38,11 @@ export const CartContainer = ()=>{
         icon:'success',
         title:'Compra exitosa!',
         text: 'Estas siendo redirigido',
-        html:`<p>Tu numero de pedido es:${compraId}</p>`,
+        html:`<p>Tu numero de pedido es:${compraId}</>`,
 
       }).then(function(){
         window.location= '/';
-        vaciarCarrito()
+        removeItem();
       })
     }
 
@@ -59,7 +58,7 @@ export const CartContainer = ()=>{
             <h3 className="tituloCart">No hay productos en el carrito </h3>
             <ShoppingCartCheckoutOutlinedIcon/>
             <Link className="btn btn-dark btn-sm" to="/">Click aquí para ir a productos</Link>
-            
+            p
         </div>
       )
     }
@@ -67,26 +66,25 @@ export const CartContainer = ()=>{
 
     return(
             <div>
-            <p>pagina del carrito</p>
+            <h4>Detalle de la compra</h4>
             {compraId && <p>Su compra fue realizada con el numero de orden {compraId}</p>}
             <div style={{width:"500px"}}>
                 {
                     productosCarrito.map((producto)=>(
                         <div style={{border:"1px solid black"}}>
                             <h3>{producto.title}</h3>
-                            <p>precio unitario {producto.price}</p>
-                            <p>cantidad {producto.quantity}</p>
-                            <p>Precio por cantidad {producto.quantityPrice}</p>
-                            <button onClick={()=>removeItem(producto.id)}>Eliminar</button>
+                        
+                            
+                         
+                            <p className="preciou">precio unitario ${producto.price}</p>
+                            <p className="preciou">cantidad de productos: {producto.quantity}</p>
+                            <p className="preciou">Precio por cantidad: ${producto.quantityPrice}</p>
+                            <p><strong>Precio total: $</strong> {getTotalPrice()}</p>
+                <p><strong>Total de productos: </strong> {getTotalProducts()}</p>
+                            <button className="btn btn-danger btn-sm" onClick={()=>removeItem(producto.id)}>Vaciar carrito</button>
                         </div>
                     ))
                 }
-                <p>Precio Total: {getTotalPrice()}</p>
-                <p>Total de Productos: {getTotalProducts()}</p>
-                <button className="btn btn-dark btn-sm" onClick={()=> vaciarCarrito()}>Vaciar Carrito</button>
-          
-                <p><strong>Precio total: </strong> {getTotalPrice()}$</p>
-                <p><strong>Total de productos: </strong> {getTotalProducts()}</p>
                 <form onSubmit={sendOrder}>
                     <label>Nombre</label>
                     <input type="text" placeholder="Nombre"/>
