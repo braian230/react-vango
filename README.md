@@ -35,6 +35,7 @@ Material UI
     "react-router-dom": "^6.4.2",
     "react-scripts": "^2.1.3",
     "web-vitals": "^2.1.4"
+
 ####Autor 
 Ariel Moreno 
 
