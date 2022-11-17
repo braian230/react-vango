@@ -1,7 +1,7 @@
 # Vango Accesorios
 E-commerce   
 
-## Descripción
+##Autor: Ariel Moreno/descripción
 E-commerce creado con REACT JS
 
 
@@ -36,6 +36,5 @@ Material UI
     "react-scripts": "^2.1.3",
     "web-vitals": "^2.1.4"
 
-####Autor 
-Ariel Moreno 
+
 
