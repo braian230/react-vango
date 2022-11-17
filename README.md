@@ -1,7 +1,7 @@
 # Vango Accesorios
 E-commerce   
 
-##Descripción
+###Descripcion
 E-commerce creado con REACT JS
 
 
