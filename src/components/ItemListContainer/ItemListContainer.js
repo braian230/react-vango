@@ -7,7 +7,8 @@ import { useParams } from "react-router-dom";
 import { collection,getDocs,query, where} from "firebase/firestore";
 import React from 'react';
 import {db} from '../../utils/firebase';
-
+import EmojiNatureIcon from '@mui/icons-material/EmojiNature';
+import EmojiNature from "@mui/icons-material/EmojiNature";
 export const ItemListContainer = ()=>{
 
     const {categoryId} = useParams();
@@ -34,6 +35,7 @@ export const ItemListContainer = ()=>{
 
     return(
         <div className="item-list-container">
+            <EmojiNature/>
             <h1>Vango accesorios</h1>
     
             {loading ? <p>Espera mientras carga...</p>
