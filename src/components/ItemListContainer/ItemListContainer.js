@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import { collection,getDocs,query, where} from "firebase/firestore";
 import React from 'react';
 import {db} from '../../utils/firebase';
-import EmojiNatureIcon from '@mui/icons-material/EmojiNature';
+
 import EmojiNature from "@mui/icons-material/EmojiNature";
 export const ItemListContainer = ()=>{
 

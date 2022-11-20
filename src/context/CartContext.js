@@ -45,9 +45,10 @@ export const CartProvider = ({children})=>{
         const newProducts = productosCarrito.filter((elemento)=>elemento.id !== id);
         setProductosCarrito(newProducts);
     }
+    const vaciarCarrito = ()=> setProductosCarrito({});
    
     return(
-        <CartContext.Provider value={{productosCarrito: productosCarrito, addProduct, getTotalPrice, getTotalProducts,removeItem}}>
+        <CartContext.Provider value={{productosCarrito: productosCarrito, addProduct, getTotalPrice, getTotalProducts,removeItem,vaciarCarrito}}>
             {children}
         </CartContext.Provider>
     )

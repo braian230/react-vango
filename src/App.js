@@ -6,7 +6,6 @@ import { NavBar }  from './components/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {ItemDetailContainer} from "./components/ItemDetailContainer/ItemDetailContainer";
 import {CartProvider} from "./context/CartContext"
-import {EventosDefault} from "./components/EventosDefault/EventosDefault";
 function App() {
  
   
@@ -21,7 +20,6 @@ function App() {
             <Route path="/" element={<ItemListContainer/>}/>
             <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
             <Route path="/item/:id" element={<ItemDetailContainer/>}/>
-            <Route path="/contacto" element={<EventosDefault/>}/>
             <Route path='/cart' element={<CartContainer/>}/>
         </Routes>
         <footer>Todos los derechos reservados Vango Accesorios 2022.</footer>

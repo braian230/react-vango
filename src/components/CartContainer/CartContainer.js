@@ -10,7 +10,7 @@ import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCh
 
 export const CartContainer = ()=>{
     const value = useContext(CartContext);
-    const {productosCarrito, getTotalPrice, getTotalProducts, removeItem} = value;
+    const {productosCarrito, getTotalPrice, getTotalProducts, removeItem,vaciarCarrito} = value;
     const [compraId, setCompraId] = useState("");
 
     const sendOrder = (evt)=>{
@@ -42,14 +42,8 @@ export const CartContainer = ()=>{
 
       }).then(function(){
         window.location= '/';
-        removeItem();
+        vaciarCarrito()
       })
-    }
-
-    const updateProduct = ()=>{
-  
-        const queryRef = doc(db,"items","HfIz8PlCwnXt5pws8g9b");
-        updateDoc(queryRef,{price:120}).then(()=>console.log("actualizado correctamente")).catch((error)=>console.log("hubo un error"))
     }
     if (productosCarrito.length === 0) {
       return (
@@ -81,10 +75,11 @@ export const CartContainer = ()=>{
                             <p className="preciou">Precio por cantidad: ${producto.quantityPrice}</p>
                             <p><strong>Precio total: $</strong> {getTotalPrice()}</p>
                 <p><strong>Total de productos: </strong> {getTotalProducts()}</p>
-                            <button className="btn btn-danger btn-sm" onClick={()=>removeItem(producto.id)}>Vaciar carrito</button>
+                            <button className="btn btn-danger btn-sm" onClick={()=>removeItem(producto.id)}>Eliminar producto</button>
                         </div>
                     ))
                 }
+                <button className="eliminar btn btn-danger btn-sm" onClick={()=>vaciarCarrito()}>Vaciar Carrito</button>
                 <form onSubmit={sendOrder}>
                     <label>Nombre</label>
                     <input type="text" placeholder="Nombre"/>
@@ -102,7 +97,6 @@ export const CartContainer = ()=>{
                     <button className="boton-comprar" type="submit">Comprar</button>
                 </form>
             </div>
-            <button onClick={updateProduct}>Actualizar producto</button>
             {compraId && viewAlert()}
         </div>
     )

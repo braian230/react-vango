@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import './ItemDetailContainer.css';
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import {useParams} from "react-router-dom";
@@ -8,8 +9,7 @@ import {doc,getDoc } from "firebase/firestore";
 export const ItemDetailContainer = ()=>{
     const {id} = useParams();
     const [itemProduct, setItemProduct] = useState({});
-
-  
+    const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
         const getProducto = async()=>{
@@ -24,12 +24,14 @@ export const ItemDetailContainer = ()=>{
             setItemProduct(newDoc)
         }
         getProducto();
+        setLoading(false);
     },[id])
 
     return(
         <div className="item-detail-container">
             <p style={{width:"100%", color: "white"}}>Producto selecionado</p>
-            <ItemDetail item={itemProduct}/>
+            {loading? <p>Cargando detalles de compra</p>
+             :   <ItemDetail item={itemProduct}/>}
         </div>
     )
 }
